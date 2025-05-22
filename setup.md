@@ -1,4 +1,40 @@
-# Setuup
+# Setup
+## Install
+Run the following commands in your terminal in order to install everything you need:
+```
+sudo apt update
+sudo apt upgrade
+sudo apt autoremove
+sudo snap install brave spotify dbeaver-ce telegram-desktop
+sudo snap install nvim --classic
+sudo apt install gnome-shell-extension-manager build-essential xclip git dconf-editor ripgrep remmina -y
+```
+
+## GIT Setup
+In order to use git you will have to create an SSH key and upload it to the relevant platform
+
+### Azure Devops
+ - Run the following command in your terminal to create a new RSA SSH key for Azure. Follow the prompts and be sure to use a descriptive name and a password that you will remember.
+```
+ssh-keygen -t rsa -b 4096 -c "<<email>>"
+```
+
+ - Run the following command to go to your folder where your ssh keys are saves:
+```
+cd ~/.ssh
+```
+
+ - Run the following command in your terminal to see the contents of your public key:
+```
+cat <<ssh_key_name>>.pub
+```
+
+ - Copy the contents of the file from your terminal
+ - Go to Azure Devops on your Browser
+ - Click on the 'User Settings' option in the top right of the screen
+ - Click on the 'SSH Keys' option in the drop-down menu
+ - Create a new SSH Key with the contents that you copied earlier
+
 ## Workspace
 ### STEP 1 : Installing V-Shell
 In the terminal install exstension manager:

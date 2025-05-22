@@ -31,3 +31,15 @@ vim.keymap.set(
         desc = "Clear buffer and exit to Explorer"
     }
 )
+vim.keymap.set(
+    "n",
+    "<leader>eb",
+    function()
+        vim.cmd('bd')
+    end,
+    {
+        noremap = true,
+        silent = true,
+        desc = "Clear buffer"
+    }
+)
