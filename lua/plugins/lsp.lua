@@ -101,8 +101,7 @@ return {
 
         local ensure_installed = vim.tbl_keys(language_servers or {})
         vim.list_extend(ensure_installed, {
-            "stylua", -- Used to format Lua code
-            "omnisharp",
+            "omnisharp"
         })
         require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 

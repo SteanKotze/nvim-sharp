@@ -46,3 +46,6 @@ vim.o.scrolloff = 20
 vim.o.confirm = true
 
 vim.o.clipboard = "unnamedplus"     -- option: sync clipboard between OS and nvim
+
+vim.g.icons_enabled = false
+vim.g.have_nerd_font = false
