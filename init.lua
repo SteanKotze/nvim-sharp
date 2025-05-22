@@ -12,5 +12,6 @@ require("lazy").setup({
     require("plugins.theme"),
     require("plugins.todo_comments"),
     require("plugins.tree_sitter"),
-    require("plugins.mini")
+    require("plugins.mini"),
+    require("plugins.multi_cursor")
 }, {})
