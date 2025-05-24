@@ -13,3 +13,6 @@ require("lazy").setup({
     require("plugins.telescope"),       -- for finding stuff
     require("plugins.multi_cursor")     -- for multi cursor
 }, {})
+
+
+--bruh this one hella comment
