@@ -3,14 +3,13 @@ require("keymaps")
 require("commands")
 require("lazy_setup")
 require("lazy").setup({
-    require("plugins.blink"),           -- automcompletion
-    require("plugins.lsp"),
-    require("plugins.git"),
-    require("plugins.which_key"),
-    require("plugins.telescope"),
     require("plugins.lazy_dev"),
     require("plugins.theme"),
     require("plugins.todo_comments"),
-    require("plugins.tree_sitter"),
-    require("plugins.multi_cursor")
+    require("plugins.blink"),           -- automcompletion
+    require("plugins.lsp"),             -- language server protocol
+    require("plugins.git"),             -- git signs
+    require("plugins.which_key"),       -- cute ui for <leader> and stuffs
+    require("plugins.telescope"),       -- for finding stuff
+    require("plugins.multi_cursor")     -- for multi cursor
 }, {})

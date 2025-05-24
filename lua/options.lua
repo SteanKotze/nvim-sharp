@@ -49,3 +49,4 @@ vim.o.clipboard = "unnamedplus"     -- option: sync clipboard between OS and nvi
 
 vim.g.icons_enabled = false
 vim.g.have_nerd_font = false
+vim.g.netrw_liststyle = 3
