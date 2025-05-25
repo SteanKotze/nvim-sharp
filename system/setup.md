@@ -7,7 +7,7 @@ sudo apt upgrade
 sudo apt autoremove
 sudo snap install brave spotify dbeaver-ce telegram-desktop
 sudo snap install nvim --classic
-sudo apt install gnome-shell-extension-manager build-essential xclip git dconf-editor ripgrep remmina -y
+sudo apt install gnome-shell-extension-manager build-essential xclip git dconf-editor ripgrep remmina nvm -y
 ```
 
 ## GIT Setup
@@ -37,18 +37,10 @@ cat <<ssh_key_name>>.pub
 
 ## Workspace
 ### STEP 1 : Installing V-Shell
-In the terminal install exstension manager:
-```sudo apt install gnome-shell-extension-manager```
-
-Once completed, type `extension-manager` in the terminal to open the GUI. In the search bar you then want to
-search for `v-shell` and install it.
+Type `extension-manager` in the terminal to open the GUI. In the search bar you then want to search for `v-shell` and install it.
 
 ### STEP 2 : Setting keyboard shortcuts
-In the terminal, install the dconf-editor GUI using the command below:
-```sudo apt install dconf-editor```
-
-Once completed, type `dconf-editor` in your terminal to open the GUI. Once open follow the below
-path to get to the workspace settings:
+Type `dconf-editor` in your terminal to open the GUI. Once open follow the below path to get to the workspace settings:
     ```/org/gnome/desktop/wm/keybindings```
 
 Now, search for `workspace-[up/down]` and then you can modify the keybindings as you require.
@@ -69,38 +61,5 @@ Once completed, we will need to ensure that the neovim config exists on our syst
 folder using the below command:
     ```cd .config```
 
-Now, type `ls` and confirm if an `nvim` folder exists. If it does not, then run the below command:
-    ```mkdir nvim```
-
-If we now type `ls` there should be a nvim folder. CD to that folder and then run the below command to create
-your neovim init file:
-    ```touch init.lua```
-
-#### Scripts
-
-#### Extensions
- - folke/todo-comments.nvim
-    - Functionality: Highlight keywords inside of the editor
-    - Dependancies:
-        - nvim-lua/plenary.nvim
- - gitsigns.nvim
-    - Functionality: Provide git signs in the editor
- - which-key.nvim
-    - Functionality: Shows pending key options. Useful for user with <leader>
-
-#### Keybinds
- - :Lazy
-    - Opens the lazy nvim dashboard
- - <leader>s
-    - Search functionality
-
-#### Bugs
-
-### GIT
-<<ToDo>>
-
-#### Scripts
-
-## Other
-### Applications
-
+Once you are in your config folder, clone this git repository and then rename the repository using the below command:
+    ```mv <<repository_folder_name>>/ nvim/```
