@@ -8,6 +8,7 @@ require("lazy").setup({
     require("plugins.todo_comments"),
     require("plugins.blink"),           -- automcompletion
     require("plugins.lsp"),             -- language server protocol
+    require("plugins.tiny_code_actions"),
     require("plugins.git"),             -- git signs
     require("plugins.which_key"),       -- cute ui for <leader> and stuffs
     require("plugins.telescope"),       -- for finding stuff

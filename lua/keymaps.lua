@@ -19,34 +19,46 @@ vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move focus to the upper window"
 
 -- Custom keybinds
 vim.keymap.set(
-    "n",
-    "<leader>em",
+    "n", "<leader>em",
     function()
         vim.cmd('Ex')
     end,
     {
+        desc = "Clear buffer and exit to Explorer",
         noremap = true,
         silent = true,
-        desc = "Clear buffer and exit to Explorer"
     }
 )
 vim.keymap.set(
-    "n",
-    "<leader>eb",
+    "n", "<leader>eb",
     function()
         vim.cmd('bd')
     end,
     {
+        desc = "Clear buffer",
         noremap = true,
         silent = true,
-        desc = "Clear buffer"
     }
 )
 vim.keymap.set(
-    "n",
-    "<leader>od",
+    "n", "<leader>od",
     function()
         vim.diagnostic.open_float()
     end,
-    { desc = "[O]pen [D]iagnostics" }
+    {
+        desc = "[O]pen [D]iagnostics",
+        noremap = true,
+        silent = true
+    }
+)
+vim.keymap.set(
+    "n", "<leader>oa",
+    function()
+        require("tiny-code-action").code_action()
+    end,
+    {
+        desc = "[O]pen Code [A]ctions",
+        noremap = true,
+        silent = true
+    }
 )
