@@ -42,3 +42,11 @@ vim.keymap.set(
         desc = "Clear buffer"
     }
 )
+vim.keymap.set(
+    "n",
+    "<leader>od",
+    function()
+        vim.diagnostic.open_float()
+    end,
+    { desc = "[O]pen [D]iagnostics" }
+)
