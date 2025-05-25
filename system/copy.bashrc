@@ -166,37 +166,14 @@ function dotnet-publish()
   sudo dotnet publish -c Release -o ./Publish
 }
 
-function plants-migration-add()
+function dotnet-clean()
 {
-  clear
-  cd ~/Work/sosr/plants/Storage
-  dotnet ef --startup-project ../Platform migrations add $1
+    clear
+    dotnet clean
+    dotnet build
 }
 
-function plants-migration-remove()
+function tailwinds-run()
 {
-  clear
-  cd ~/Work/sosr/plants/Storage
-  dotnet ef migrations remove
-}
-
-function pretty_diff()
-{
-    git diff --patch-with-stat | awk '
-      /^diff --git/ {
-          print "\n================================ =============================="
-          print "================================ =============================="
-          next
-      }
-      { print }
-    '
-}
-
-function diff()
-{
-    file_name="$1/diff.git"
-    rm "$file_name"
-    touch "$file_name"
-    pretty_diff $1 | grep -vE '^(index |--- |\+\+\+ )' >> "$file_name"
-    nvim $file_name
+    npx @tailwindcss/cli -i ./wwwroot/css/tailwinds.input.css -o ./wwwroot/css/tailwinds.output.css --watch
 }
