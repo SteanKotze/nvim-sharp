@@ -11,7 +11,8 @@ require("lazy").setup({
     require("plugins.git"),             -- git signs
     require("plugins.which_key"),       -- cute ui for <leader> and stuffs
     require("plugins.telescope"),       -- for finding stuff
-    require("plugins.multi_cursor")     -- for multi cursor
+    require("plugins.multi_cursor"),    -- for multi cursor
+    require("plugins.vim_fugitive")
 }, {})
 
 

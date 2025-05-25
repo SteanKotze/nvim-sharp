@@ -22,7 +22,6 @@ vim.keymap.set(
     "n",
     "<leader>em",
     function()
-        vim.cmd('bd')
         vim.cmd('Ex')
     end,
     {
