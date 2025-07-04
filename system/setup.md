@@ -7,7 +7,7 @@ sudo apt upgrade
 sudo apt autoremove
 sudo snap install brave spotify dbeaver-ce telegram-desktop
 sudo snap install nvim --classic
-sudo apt install gnome-shell-extension-manager build-essential xclip git dconf-editor ripgrep remmina nvm -y
+sudo apt install gnome-shell-extension-manager build-essential xclip git dconf-editor ripgrep remmina nvm dotnet-sdk-8.0 aspnetcore-runtime-8.0 -y
 ```
 
 ## GIT Setup

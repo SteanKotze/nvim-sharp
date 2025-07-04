@@ -50,3 +50,8 @@ vim.o.clipboard = "unnamedplus"     -- option: sync clipboard between OS and nvi
 vim.g.icons_enabled = false
 vim.g.have_nerd_font = false
 vim.g.netrw_liststyle = 3
+-- folding
+vim.opt.foldmethod = "indent"
+vim.opt.foldenable = true
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99

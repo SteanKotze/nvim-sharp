@@ -12,19 +12,31 @@ vim.keymap.set("n", "<up>", '<cmd>echo "boop"<CR>')
 vim.keymap.set("n", "<down>", '<cmd>echo "woof"<CR>')
 
 -- Keybinds to make split navigation easier.
-vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move focus to the left window" })
-vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move focus to the right window" })
-vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move focus to the lower window" })
-vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move focus to the upper window" })
+vim.keymap.set("n", "<leader>nh", "<C-w>h", { desc = "Move focus to the left window" })
+vim.keymap.set("n", "<leader>nl", "<C-w>l", { desc = "Move focus to the right window" })
+vim.keymap.set("n", "<leader>nj", "<C-w>j", { desc = "Move focus to the lower window" })
+vim.keymap.set("n", "<leader>nk", "<C-w>k", { desc = "Move focus to the upper window" })
 
 -- Custom keybinds
 vim.keymap.set(
     "n", "<leader>em",
     function()
+        vim.cmd('bd')
         vim.cmd('Ex')
     end,
     {
         desc = "Clear buffer and exit to Explorer",
+        noremap = true,
+        silent = true,
+    }
+)
+vim.keymap.set(
+    "n", "<leader>en",
+    function()
+        vim.cmd('Ex')
+    end,
+    {
+        desc = "[E]xit to explorer o[N]ly",
         noremap = true,
         silent = true,
     }
@@ -47,6 +59,15 @@ vim.keymap.set(
     end,
     {
         desc = "[O]pen [D]iagnostics",
+        noremap = true,
+        silent = true
+    }
+)
+vim.keymap.set(
+    "n", "<leader>gdv",
+    ":Gdiffsplit<CR>",
+    {
+        desc = "[G]it [D]iff [V]ertically",
         noremap = true,
         silent = true
     }
