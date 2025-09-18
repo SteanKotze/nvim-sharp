@@ -12,10 +12,10 @@ vim.keymap.set("n", "<up>", '<cmd>echo "boop"<CR>')
 vim.keymap.set("n", "<down>", '<cmd>echo "woof"<CR>')
 
 -- Keybinds to make split navigation easier.
-vim.keymap.set("n", "<leader>nh", "<C-w>h", { desc = "Move focus to the left window" })
-vim.keymap.set("n", "<leader>nl", "<C-w>l", { desc = "Move focus to the right window" })
-vim.keymap.set("n", "<leader>nj", "<C-w>j", { desc = "Move focus to the lower window" })
-vim.keymap.set("n", "<leader>nk", "<C-w>k", { desc = "Move focus to the upper window" })
+vim.keymap.set("n", "<leader>gh", "<C-w>h", { desc = "[G]o to the left window" })
+vim.keymap.set("n", "<leader>gl", "<C-w>l", { desc = "[G]o to the right window" })
+vim.keymap.set("n", "<leader>gj", "<C-w>j", { desc = "[G]o to the lower window" })
+vim.keymap.set("n", "<leader>gk", "<C-w>k", { desc = "[G]o to the upper window" })
 
 -- Custom keybinds
 vim.keymap.set(

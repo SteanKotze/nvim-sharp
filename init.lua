@@ -16,5 +16,7 @@ require("lazy").setup({
     require("plugins.vim_fugitive")
 }, {})
 
-
---bruh this one hella comment
+vim.cmd("vsplit")
+vim.cmd("enew")
+vim.cmd("wincmd h")
+vim.cmd("vertical resize 50")

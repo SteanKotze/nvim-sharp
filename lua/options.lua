@@ -5,6 +5,7 @@ vim.o.showmode = true --	option : show current nvim mode
 vim.o.undofile = true --	option : save undo history
 
 vim.o.breakindent = true --	option : idk - helps with indentation
+vim.o.equalalways = false --    option : sets the windows to not always open equal size
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
@@ -33,15 +34,19 @@ vim.o.splitbelow = true
 vim.o.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
+--
 -- Preview substitutions live, as you type!
 vim.o.inccommand = "split"
 
+--
 -- Show which line your cursor is on
 vim.o.cursorline = true
 
+--
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.o.scrolloff = 20
 
+--
 -- dialog on fail of command
 vim.o.confirm = true
 
@@ -50,8 +55,11 @@ vim.o.clipboard = "unnamedplus"     -- option: sync clipboard between OS and nvi
 vim.g.icons_enabled = false
 vim.g.have_nerd_font = false
 vim.g.netrw_liststyle = 3
+
+--
 -- folding
-vim.opt.foldmethod = "indent"
+vim.opt.foldmethod = "expr"
+vim.o.foldexpr = "v:lua.vim.lsp.foldexpr()"
 vim.opt.foldenable = true
 vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
