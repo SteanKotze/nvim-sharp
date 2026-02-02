@@ -83,3 +83,25 @@ vim.keymap.set(
         silent = true
     }
 )
+
+vim.keymap.set(
+    "n",
+    "<leader>vs",
+    ":vertical resize 50<CR>",
+    { silent = true }
+)
+
+vim.keymap.set(
+    "n", "<leader>vl",
+    function()
+        vim.cmd('vs')
+        vim.cmd("wincmd h")
+        require("telescope.builtin").find_files()
+    end,
+    {
+        desc = "Clear buffer and exit to Explorer",
+        noremap = true,
+        silent = true,
+    }
+)
+
