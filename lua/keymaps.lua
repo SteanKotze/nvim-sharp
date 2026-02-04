@@ -99,9 +99,21 @@ vim.keymap.set(
         require("telescope.builtin").find_files()
     end,
     {
-        desc = "Clear buffer and exit to Explorer",
+        desc = "[V]ertical split [L]eft and open new file on right",
         noremap = true,
         silent = true,
     }
 )
-
+vim.keymap.set(
+    "n",
+    "<leader>v<leader>",
+    function()
+        vim.cmd('vs')
+        require("telescope.builtin").buffers()
+    end,
+    {
+        desc = "[V]ertical split and open buffers",
+        noremap = true,
+        silent = true,
+    }
+)
