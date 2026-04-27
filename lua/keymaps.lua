@@ -92,27 +92,93 @@ vim.keymap.set(
 )
 
 vim.keymap.set(
-    "n", "<leader>vl",
+    "n", "<leader>vlf",
+    function()
+        vim.cmd('vs')
+        require("telescope.builtin").find_files()
+    end,
+    {
+        desc = "[V]ertical split (L)right and [Find] new file",
+        noremap = true,
+        silent = true,
+    }
+)
+vim.keymap.set(
+    "n", "<leader>vlg",
+    function()
+        vim.cmd('vs')
+        require("telescope.sorters").live_grep({
+            sorter = require("telescope.sorters").get_generic_fuzzy_sorter()
+        })
+    end,
+    {
+        desc = "[V]ertical split (L)right and [G]rep",
+        noremap = true,
+        silent = true,
+    }
+)
+vim.keymap.set(
+    "n", "<leader>vhf",
     function()
         vim.cmd('vs')
         vim.cmd("wincmd h")
         require("telescope.builtin").find_files()
     end,
     {
-        desc = "[V]ertical split [L]eft and open new file on right",
+        desc = "[V]ertical split (H)left and [Find] new file",
+        noremap = true,
+        silent = true,
+    }
+)
+vim.keymap.set(
+    "n", "<leader>vjf",
+    function()
+        vim.cmd('sp')
+        vim.cmd("wincmd j")
+        require("telescope.builtin").find_files()
+    end,
+    {
+        desc = "[V]ertical split (J)down and [Find] new file",
+        noremap = true,
+        silent = true,
+    }
+)
+vim.keymap.set(
+    "n", "<leader>vkf",
+    function()
+        vim.cmd('sp')
+        vim.cmd("wincmd k")
+        require("telescope.builtin").find_files()
+    end,
+    {
+        desc = "[V]ertical split (K)up and [Find] new file",
         noremap = true,
         silent = true,
     }
 )
 vim.keymap.set(
     "n",
-    "<leader>v<leader>",
+    "<leader>vl<leader>",
+    function()
+        vim.cmd('vs')
+        vim.cmd("wincmd h")
+        require("telescope.builtin").buffers()
+    end,
+    {
+        desc = "[V]ertical split (L)right and open buffers",
+        noremap = true,
+        silent = true,
+    }
+)
+vim.keymap.set(
+    "n",
+    "<leader>vh<leader>",
     function()
         vim.cmd('vs')
         require("telescope.builtin").buffers()
     end,
     {
-        desc = "[V]ertical split and open buffers",
+        desc = "[V]ertical split (H)left and open buffers",
         noremap = true,
         silent = true,
     }
